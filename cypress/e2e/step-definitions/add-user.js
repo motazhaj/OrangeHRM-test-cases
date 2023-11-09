@@ -1,5 +1,7 @@
 import { Given, When, Then } from "cypress-cucumber-preprocessor/steps";
 
+//Steps for TC 1
+
 Given("the user is on the Add User page as an admin", () => {
   cy.visit(
     "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login"
@@ -65,6 +67,8 @@ Then ("an added succesfully message appears", () => {
 Then ("the user is redirected to the admin managmenet page", () => {
     cy.url().should("contain","admin/viewSystemUsers")
 })
+
+//Steps for TC 2
 
 When("the user clicks on the Cancel Button", () => {
     cy.contains("button", "Cancel").click();
