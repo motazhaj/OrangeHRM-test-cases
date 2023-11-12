@@ -9,8 +9,10 @@
   "author": "Motaz HM",
   "license": "ISC",
   "devDependencies": {
+    "@types/cypress-cucumber-preprocessor": "^4.0.5",
     "cypress": "^13.4.0",
-    "cypress-cucumber-preprocessor": "^4.3.1"
+    "cypress-cucumber-preprocessor": "^4.3.1",
+    "tsify": "^5.0.4"
   },
   "cypress-cucumber-preprocessor": {
     "nonGlobalStepDefinations": true,
