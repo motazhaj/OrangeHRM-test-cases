@@ -21,7 +21,7 @@ export class RecruitmentActions {
 
   vacancy(vacancy: string) {
     cy.get("div[data-v-67d2aedf]").eq(0).click();
-    cy.contains("Senior QA Lead").click();
+    cy.contains("Software Engineer").click();
   }
 
   email(email: string) {
@@ -38,5 +38,33 @@ export class RecruitmentActions {
 
   saveButton() {
     cy.contains("button", "Save").click();
+  }
+
+  shortlistButton() {
+    cy.contains("button", "Shortlist").click();
+  }
+
+  scheduleInterviewButton() {
+    cy.contains("button", "Schedule Interview").click();
+  }
+
+  interviewInfo() {
+    cy.get("[data-v-1f99f73c]").eq(5).type("First Interview");
+    cy.get("[data-v-75e744cd]").eq(0).type("a");
+    cy.contains("Odis Adalwin").click();
+    cy.get("[data-v-1f99f73c]").eq(6).type("2023-11-15");
+    cy.get("[data-v-1f99f73c]").eq(7).type("01:00 AM");
+  }
+
+  markInterviewPassedButton() {
+    cy.contains("button", "Mark Interview Passed").click();
+  }
+
+  offerJobButton() {
+    cy.contains("button", "Offer Job").click();
+  }
+
+  hireButton() {
+    cy.contains("button", "Hire").click();
   }
 }
