@@ -26,9 +26,17 @@ When("the user adds a new recruit", () => {
   recruitmentActions.saveButton();
 });
 
+Then("the application should be initiated", () => {
+  recruitmentAssertions.statusApplicationInitiated();
+});
+
 When("the user shortlists the recruit", () => {
   recruitmentActions.shortlistButton();
   recruitmentActions.saveButton();
+});
+
+Then("the recruit should be shortlisted", () => {
+  recruitmentAssertions.statusShortlisted();
 });
 
 When("the user schedules an interview with the recruit", () => {
@@ -37,14 +45,42 @@ When("the user schedules an interview with the recruit", () => {
   recruitmentActions.saveButton();
 });
 
+Then("the recruit should be scheduled for an interview", () => {
+  recruitmentAssertions.statusInterviewScheduled();
+});
+
 When("the user marks the interview as passed", () => {
   recruitmentActions.markInterviewPassedButton();
   recruitmentActions.saveButton();
 });
 
+Then("the recruit should pass the interview", () => {
+  recruitmentAssertions.statusInterviewPassed();
+});
+
+When("the user marks the interview as failed", () => {
+  recruitmentActions.markInterviewFailedButton();
+});
+
+Then("the status should be failed interview", () => {
+  recruitmentAssertions.statusInterviewFailed();
+});
+
 When("the user Offer's the recruit a job", () => {
   recruitmentActions.offerJobButton();
   recruitmentActions.saveButton();
+});
+
+Then("the recruit is offered the job", () => {
+  recruitmentAssertions.statusJobOffered();
+});
+
+When("the user marks job offer as declined", () => {
+  recruitmentActions.jobOfferDeclined();
+});
+
+Then("the status should be job offer declined", () => {
+  recruitmentAssertions.statusJobOfferDeclined();
 });
 
 When("the user hires the recruit", () => {
@@ -54,4 +90,13 @@ When("the user hires the recruit", () => {
 
 Then("the recruit should be hired", () => {
   recruitmentAssertions.statusHired();
+});
+
+When("the user rejects the recruit", () => {
+  recruitmentActions.rejectButton();
+  recruitmentActions.saveButton();
+});
+
+Then("the recruit should be rejecred", () => {
+  recruitmentAssertions.statusRejected();
 });
