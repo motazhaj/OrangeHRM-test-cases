@@ -81,6 +81,7 @@ Then("the recruit should be hired", () => {
 
 When("the user marks the interview as failed", () => {
   recruitmentActions.markInterviewFailedButton();
+  recruitmentActions.saveButton();
 });
 
 Then("the status should be failed interview", () => {
@@ -89,6 +90,7 @@ Then("the status should be failed interview", () => {
 
 When("the user marks job offer as declined", () => {
   recruitmentActions.jobOfferDeclined();
+  recruitmentActions.saveButton();
 });
 
 Then("the status should be job offer declined", () => {
