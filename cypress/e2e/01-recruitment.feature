@@ -53,7 +53,6 @@ Feature: recruitment
 
 # Negative paths
 
-Feature: recruitment
     # TS 1
     Scenario: Status: Reject Initiated
         Given the user is on the recruitment page
