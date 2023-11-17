@@ -69,7 +69,7 @@ export class RecruitmentActions {
   }
 
   jobOfferDeclined() {
-    cy.contains("button", "Offer Job").click();
+    cy.contains("button", "Offer Declined").click();
   }
 
   hireButton() {
