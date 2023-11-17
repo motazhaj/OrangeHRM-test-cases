@@ -56,9 +56,8 @@ export class RecruitmentActions {
     cy.get("[data-v-1f99f73c]").eq(7).type("01:00 AM");
   }
 
-  markInterviewFailedButton(){
+  markInterviewFailedButton() {
     cy.contains("button", "Mark Interview Failed").click();
-
   }
 
   markInterviewPassedButton() {
