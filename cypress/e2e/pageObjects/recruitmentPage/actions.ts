@@ -56,6 +56,11 @@ export class RecruitmentActions {
     cy.get("[data-v-1f99f73c]").eq(7).type("01:00 AM");
   }
 
+  markInterviewFailedButton(){
+    cy.contains("button", "Mark Interview Failed").click();
+
+  }
+
   markInterviewPassedButton() {
     cy.contains("button", "Mark Interview Passed").click();
   }
@@ -64,7 +69,15 @@ export class RecruitmentActions {
     cy.contains("button", "Offer Job").click();
   }
 
+  jobOfferDeclined() {
+    cy.contains("button", "Offer Job").click();
+  }
+
   hireButton() {
     cy.contains("button", "Hire").click();
+  }
+
+  rejectButton() {
+    cy.contains("button", "Reject").click();
   }
 }
