@@ -37,6 +37,12 @@ Cypress Cucumber Preprosser 4.3.1
 - Trying to add an invalid user
 - Canceling with a valid user
 
+## Encountered Issues
+
+- this is not a good site to test on as it doesn't have unique identifiers for it's elements
+- another point why this site is bad for testing is the fact that everyone is testing on the same site and the data keeps changing and getting deleted making the correct tests fail more often than not
+- this workflow doens't have up to date documentation and i had to do a lot of trial and error to get things working(and the setup is not finished yet)
+
 ## To Do
 
 - File configuration to work with the file structure of cypress/e2e/step-defenitions/"featurename"/"featurename".{ts,js}
