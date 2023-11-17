@@ -7,6 +7,7 @@ const loginPageActions = new LoginPageActions();
 const recruitmentActions = new RecruitmentActions();
 const recruitmentAssertions = new RecruitmentAssertions();
 
+//Positive paths
 Given("the user is on the recruitment page", () => {
   loginPageActions.openLoginPage();
   loginPageActions.username("Admin");
@@ -74,4 +75,31 @@ When("the user hires the recruit", () => {
 
 Then("the recruit should be hired", () => {
   recruitmentAssertions.statusHired();
+});
+
+// Negative Paths
+
+When("the user marks the interview as failed", () => {
+  recruitmentActions.markInterviewFailedButton();
+});
+
+Then("the status should be failed interview", () => {
+  recruitmentAssertions.statusInterviewFailed();
+});
+
+When("the user marks job offer as declined", () => {
+  recruitmentActions.jobOfferDeclined();
+});
+
+Then("the status should be job offer declined", () => {
+  recruitmentAssertions.statusJobOfferDeclined();
+});
+
+When("the user rejects the recruit", () => {
+  recruitmentActions.rejectButton();
+  recruitmentActions.saveButton();
+});
+
+Then("the recruit should be rejecred", () => {
+  recruitmentAssertions.statusRejected();
 });
